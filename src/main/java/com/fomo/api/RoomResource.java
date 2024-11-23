@@ -1,3 +1,5 @@
+package com.fomo.api;
+
 import com.fomo.objects.entity.Room;
 import com.fomo.service.RoomService;
 import jakarta.inject.Inject;

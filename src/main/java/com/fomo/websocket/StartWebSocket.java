@@ -1,4 +1,4 @@
-package com.fomo;
+package com.fomo.websocket;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.websocket.EncodeException;

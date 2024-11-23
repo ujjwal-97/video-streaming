@@ -15,7 +15,7 @@ public class RoomService {
     
     public Room createRoom(String creatorId) {
         Room room = new Room();
-        room.setRoomCode(generateUniqueCode());
+//        room.setRoomCode(generateUniqueCode());
         room.setCreatorId(creatorId);
         
         RoomParticipant creator = new RoomParticipant();
@@ -30,12 +30,13 @@ public class RoomService {
     }
 
     public void addParticipant(String roomCode, String userId) {
-        Room room = findByCode(roomCode);
+//        Room room = findByCode(roomCode);
         // Add participant logic
     }
 
     public void updateVideoStatus(String roomCode, VideoStatus status, Double currentTime) {
-        Room room = findByCode(roomCode);
+//        Room room = findByCode(roomCode);
+        Room room = new Room();
         room.setStatus(status);
         room.setCurrentTime(currentTime);
         em.merge(room);
