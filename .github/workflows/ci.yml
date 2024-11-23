@@ -29,14 +29,14 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Publish Test Report
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          junit_files: "**/build/test-results/test/TEST-*.xml"
-          check_name: "Test Results"
-          comment_mode: "always"
-          fail_on: "nothing"
-          report_individual_runs: true
-          check_run_annotations: "all tests"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Publish Test Report
+#        uses: EnricoMi/publish-unit-test-result-action@v2
+#        if: always()
+#        with:
+#          junit_files: "**/build/test-results/test/TEST-*.xml"
+#          check_name: "Test Results"
+#          comment_mode: "always"
+#          fail_on: "nothing"
+#          report_individual_runs: true
+#          check_run_annotations: "all tests"
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
