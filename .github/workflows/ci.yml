@@ -38,4 +38,4 @@ jobs:
           comment_mode: "always"
           fail_on: "nothing"
           report_individual_runs: true
-          check_run_annotations: true
+          check_run_annotations: "all tests"
