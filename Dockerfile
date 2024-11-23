@@ -3,8 +3,7 @@ FROM gradle:8.5-jdk21 AS builder
 WORKDIR /app
 
 # Copy source code and build file
-COPY src/ src/
-COPY build.gradle ./
+COPY . .
 
 # Generate Gradle wrapper
 RUN gradle wrapper --gradle-version 8.5 \
