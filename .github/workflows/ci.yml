@@ -39,3 +39,4 @@ jobs:
           fail_on: "nothing"
           report_individual_runs: true
           check_run_annotations: "all tests"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
