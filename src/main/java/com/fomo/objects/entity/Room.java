@@ -1,18 +1,18 @@
 package com.fomo.objects.entity;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
+//@Entity
 @Data
 @Accessors(chain = true)
 public class Room {
-    @Id
-    @GeneratedValue
+//    @Id
+//    @GeneratedValue
     private Long id;
     
     private String roomCode;
@@ -21,6 +21,6 @@ public class Room {
     private VideoStatus status = VideoStatus.STOPPED;
     private Double currentTime = 0.0;
     
-    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
+//    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private Set<RoomParticipant> participants = new HashSet<>();
 }

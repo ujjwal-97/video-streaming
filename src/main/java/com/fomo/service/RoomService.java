@@ -6,12 +6,12 @@ import com.fomo.objects.entity.RoomParticipant;
 import com.fomo.objects.entity.VideoStatus;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.persistence.EntityManager;
+//import jakarta.persistence.EntityManager;
 
 @ApplicationScoped
 public class RoomService {
-    @Inject
-    EntityManager em;
+//    @Inject
+//    EntityManager em;
     
     public Room createRoom(String creatorId) {
         Room room = new Room();
@@ -25,7 +25,7 @@ public class RoomService {
         
         room.getParticipants().add(creator);
         
-        em.persist(room);
+//        em.persist(room);
         return room;
     }
 
@@ -39,6 +39,6 @@ public class RoomService {
         Room room = new Room();
         room.setStatus(status);
         room.setCurrentTime(currentTime);
-        em.merge(room);
+//        em.merge(room);
     }
 } 
