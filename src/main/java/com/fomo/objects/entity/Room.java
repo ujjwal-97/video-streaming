@@ -1,4 +1,15 @@
+package com.fomo.objects.entity;
+
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.experimental.Accessors;
+
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
+@Data
+@Accessors(chain = true)
 public class Room {
     @Id
     @GeneratedValue
@@ -12,10 +23,4 @@ public class Room {
     
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private Set<RoomParticipant> participants = new HashSet<>();
-    
-    // Getters, setters, and constructors
 }
-
-public enum VideoStatus {
-    PLAYING, PAUSED, STOPPED
-} 

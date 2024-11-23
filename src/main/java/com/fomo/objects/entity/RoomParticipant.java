@@ -1,4 +1,13 @@
+package com.fomo.objects.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+
 @Entity
+
 public class RoomParticipant {
     @Id
     @GeneratedValue
@@ -9,10 +18,5 @@ public class RoomParticipant {
     
     private String userId;
     private Role role;
-    
-    // Getters, setters, and constructors
 }
 
-public enum Role {
-    CREATOR, PARTICIPANT
-} 

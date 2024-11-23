@@ -1,18 +1,11 @@
-package com.example.resource;
-
-import com.example.model.Room;
-import com.example.service.RoomService;
-import javax.annotation.security.RolesAllowed;
-import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.SecurityContext;
+import com.fomo.objects.entity.Room;
+import com.fomo.service.RoomService;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.SecurityContext;
 
 @Path("/api/rooms")
 @Produces(MediaType.APPLICATION_JSON)
@@ -30,7 +23,7 @@ public class RoomResource {
     
     @POST
     @Path("/{roomCode}/join")
-    public Response joinRoom(@PathParam("roomCode") String roomCode, 
+    public Response joinRoom(@PathParam("roomCode") String roomCode,
                            @Context SecurityContext securityContext) {
         String userId = securityContext.getUserPrincipal().getName();
         roomService.addParticipant(roomCode, userId);
