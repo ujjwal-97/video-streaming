@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     name: Deploy to Render
-    # Only run if CI workflow succeeded and it's on the main branch
+    # Only run if CI workflow succeeded and it's on the main ok branch
     if: |
       github.event.workflow_run.conclusion == 'success' && 
       github.event.workflow_run.head_branch == 'main'
